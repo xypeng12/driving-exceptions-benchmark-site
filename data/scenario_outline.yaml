@@ -1,0 +1,747 @@
+# Current S1-S4 environment definitions only: 8 + 2 + 2 + 2 combinations.
+# No strategies, model endpoints, runtime, repetitions or recording policy here.
+schema_version: '4'
+name: driving-environments
+groups:
+- mechanism: I
+  stratum: I-C1
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: true
+  opportunity_density: more
+  information_condition: adequate
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_clear_sparse_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 60.0
+    clear_gap_max: 80.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 60.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: I
+  stratum: I-C2
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: true
+  opportunity_density: more
+  information_condition: needs_observation
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_clear_sparse_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 60.0
+    clear_gap_max: 80.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 60.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: I
+  stratum: I-C3
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: true
+  opportunity_density: fewer
+  information_condition: adequate
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_clear_dense_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [4, 5]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 45.0
+    clear_gap_max: 65.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: I
+  stratum: I-C4
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: true
+  opportunity_density: fewer
+  information_condition: needs_observation
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_clear_dense_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [4, 5]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 45.0
+    clear_gap_max: 65.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: I
+  stratum: I-C5
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: false
+  opportunity_density: more
+  information_condition: adequate
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_parked_sparse_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 60.0
+    clear_gap_max: 80.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 60.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: I
+  stratum: I-C6
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: false
+  opportunity_density: more
+  information_condition: needs_observation
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_parked_sparse_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 60.0
+    clear_gap_max: 80.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 60.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: I
+  stratum: I-C7
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: false
+  opportunity_density: fewer
+  information_condition: adequate
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_parked_dense_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [4, 5]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 45.0
+    clear_gap_max: 65.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: I
+  stratum: I-C8
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: false
+  opportunity_density: fewer
+  information_condition: needs_observation
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 500.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: I
+  variant: shoulder_parked_dense_oncoming
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [4, 5]
+    platoon_weights: [9.0, 1.0]
+    clear_gap_min: 45.0
+    clear_gap_max: 65.0
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 3.5
+    intra_gap_max: 4.0
+    quiet_gap_probability: 0.0
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 90.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: W-A
+  stratum: W-A
+  distribution_version: section20-v1
+  equipment_duration: short
+  ego_entry: null
+  shoulder_available: null
+  opportunity_density: null
+  information_condition: null
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 100.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: W
+  variant: channel_temporarily_blocked
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2, 3, 5]
+    platoon_weights: null
+    clear_gap_min: null
+    clear_gap_max: null
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 1.4
+    intra_gap_max: 2.8
+    quiet_gap_probability: 0.15
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 45.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: W-A
+  stratum: W-A
+  distribution_version: section20-v1
+  equipment_duration: long
+  ego_entry: null
+  shoulder_available: null
+  opportunity_density: null
+  information_condition: null
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 100.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: W
+  variant: channel_temporarily_blocked
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2, 3, 5]
+    platoon_weights: null
+    clear_gap_min: null
+    clear_gap_max: null
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 1.4
+    intra_gap_max: 2.8
+    quiet_gap_probability: 0.15
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 45.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: W-B
+  stratum: W-B
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: upper
+  shoulder_available: null
+  opportunity_density: null
+  information_condition: null
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 100.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: W
+  variant: dual_channel_one_available
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2, 3, 5]
+    platoon_weights: null
+    clear_gap_min: null
+    clear_gap_max: null
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 1.4
+    intra_gap_max: 2.8
+    quiet_gap_probability: 0.15
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 45.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: W-B
+  stratum: W-B
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: lower
+  shoulder_available: null
+  opportunity_density: null
+  information_condition: null
+  release_relation: null
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 100.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: W
+  variant: dual_channel_one_available
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2, 3, 5]
+    platoon_weights: null
+    clear_gap_min: null
+    clear_gap_max: null
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 1.4
+    intra_gap_max: 2.8
+    quiet_gap_probability: 0.15
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 45.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: W-C
+  stratum: W-C-normal
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: null
+  opportunity_density: null
+  information_condition: null
+  release_relation: after_clearance
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 100.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: W
+  variant: shared_channel_alternating
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2, 3, 5]
+    platoon_weights: null
+    clear_gap_min: null
+    clear_gap_max: null
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 1.4
+    intra_gap_max: 2.8
+    quiet_gap_probability: 0.15
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 45.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}
+- mechanism: W-C
+  stratum: W-C-early
+  distribution_version: section20-v1
+  equipment_duration: null
+  ego_entry: null
+  shoulder_available: null
+  opportunity_density: null
+  information_condition: null
+  release_relation: early_with_residual
+  mode: original
+  observation:
+    operating_domain_version: section31-odd-v5
+    sensor_mounts_m:
+    - [1.8, -0.8, 1.8]
+    - [1.8, 0.8, 1.8]
+    motion_assumption: synthetic_road_rules_v1
+    support_horizon_seconds: 10.0
+    sensor_height_m: 1.8
+    range_m: 100.0
+    fov_degrees: 360.0
+    yaw_offset: 0.0
+    history_limit: 16
+    validity_seconds: 2.0
+    assumed_speed_bound: 10.0
+  template: W
+  variant: shared_channel_early_release
+  seed: 0
+  split: dev
+  traffic:
+    platoon_sizes: [1, 2, 3, 5]
+    platoon_weights: null
+    clear_gap_min: null
+    clear_gap_max: null
+    speed: 6.0
+    episode_traffic_horizon: 310.0
+    intra_gap_min: 1.4
+    intra_gap_max: 2.8
+    quiet_gap_probability: 0.15
+    quiet_gap_mean: 25.0
+    incident_followers: 2
+    work_oncoming_count: 2
+    work_arrival_gap: 12.0
+    following_vehicles: 1
+    following_distance: 14.0
+    observation_window: 45.0
+  events: {closed_channel_occupied: true, equipment_departure: 8.0, equipment_speed: 2.0,
+    all_stop_interval: 1.0, opposing_speed: 3.0, opposing_initial_x: 64.0, opposing_lead_x: 40.0,
+    opposing_tail_x: 65.0}
+  facilities: {visibility: visible, acquisition: wide, visible_after: null, quality: clear,
+    entry_deadline: 70.0, clear_by: 110.0, vehicle_type: passenger, authorization: design,
+    restricted_entry: closed}
+  geometry: {obstacle_x: 43.0, obstacle_length: 5.0, obstacle_width: 2.2, shoulder_width: 3.8,
+    channel_width: 3.8, channel_offset: 3.4}

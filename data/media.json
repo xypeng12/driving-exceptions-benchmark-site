@@ -1,0 +1,264 @@
+{
+  "I": {
+    "run_id": "20261021T072916553298Z-9d0aa66930",
+    "experiment_id": "rule-test-100s-01",
+    "driver": "rule_state_machine",
+    "purpose": "Scenario demonstration; not a recovery or safety result",
+    "seed": 0,
+    "stratum": "I-C2",
+    "recorded_parameters": {
+      "shoulder_available": true,
+      "opportunity_density": "more",
+      "information_condition": "needs_observation",
+      "equipment_duration": null,
+      "ego_entry": null,
+      "release_relation": null
+    },
+    "views": {
+      "camera": {
+        "gif": "media/I-camera.gif",
+        "poster": "media/I-camera-poster.jpg",
+        "sha256": "93e08393db0242da2de6176862743ab1c1a52e32d1b456a587e6501611b5f275",
+        "frames": 39,
+        "width": 480,
+        "height": 320,
+        "frame_duration_ms": 1000
+      },
+      "bev": {
+        "gif": "media/I-bev-colors-v1.gif",
+        "poster": "media/I-bev-colors-v1-poster.jpg",
+        "sha256": "e22c8a8b18d3fdd27a7978b5a1074d16dcd6ae0bace184c6c151973bf60a76e4",
+        "frames": 39,
+        "width": 1280,
+        "height": 320,
+        "frame_duration_ms": 1000,
+        "source_original_sha256": "ff5a84fa9c3fe6dc2f40a67b39cd1cccc1ac266b153b85457f18d4c16530f03a",
+        "display_derivative": true,
+        "source_samples_sha256": "0dda9073b1c437d7fe1b43b12bcdfe82bb17faabbd53af98fbf95db3bf8f2e39",
+        "rendering": "Native MetaDrive replay of actual saved states; role-based colors; no physics/policy steps",
+        "role_colors": {
+          "ego": "#416eb4",
+          "blocking_vehicle_or_equipment": "#8b1e2d",
+          "other_traffic": "#f0af28",
+          "barrier": "#5a5a5a"
+        },
+        "blocking_actor_ids": [
+          "a9e9f572e1f9705c001adb301cc9c9d4"
+        ],
+        "frame_times_unchanged": true,
+        "all_encoded_frames_have_blue_ego": true
+      }
+    },
+    "compared_catalog_fields": [
+      "mechanism",
+      "stratum",
+      "seed",
+      "split",
+      "equipment_duration",
+      "ego_entry",
+      "shoulder_available",
+      "opportunity_density",
+      "information_condition",
+      "release_relation"
+    ],
+    "current_outline_differences": [],
+    "sim_start_seconds": 0.0,
+    "sim_end_seconds": 38.00000000000027
+  },
+  "W-A": {
+    "run_id": "20261021T074811767663Z-20992c47ee",
+    "experiment_id": "rule-test-100s-01",
+    "driver": "rule_state_machine",
+    "purpose": "Scenario demonstration; not a recovery or safety result",
+    "seed": 0,
+    "stratum": "W-A",
+    "recorded_parameters": {
+      "shoulder_available": null,
+      "opportunity_density": null,
+      "information_condition": null,
+      "equipment_duration": "short",
+      "ego_entry": null,
+      "release_relation": null
+    },
+    "views": {
+      "camera": {
+        "gif": "media/W-A-camera.gif",
+        "poster": "media/W-A-camera-poster.jpg",
+        "sha256": "e8dfdc09d980591963d7d203bf528f1a7c92a7dd47e99409c990ec6f7c040855",
+        "frames": 46,
+        "width": 480,
+        "height": 320,
+        "frame_duration_ms": 1000
+      },
+      "bev": {
+        "gif": "media/W-A-bev-colors-v1.gif",
+        "poster": "media/W-A-bev-colors-v1-poster.jpg",
+        "sha256": "11b8c9b1fade64350ff9e5be9e5f69c0e2c9e7836f0bab70b974d97616571712",
+        "frames": 46,
+        "width": 1280,
+        "height": 320,
+        "frame_duration_ms": 1000,
+        "source_original_sha256": "44772fa73bb9011cfbba542aa06d1721044400f85dc20f93d6f1fc6a8c92012a",
+        "display_derivative": true,
+        "source_samples_sha256": "813f3a8b2ed7a26d460499e5b6d7ea631d8c37f44f7d08da69f161f2c8ec6fd2",
+        "rendering": "Native MetaDrive replay of actual saved states; role-based colors; no physics/policy steps",
+        "role_colors": {
+          "ego": "#416eb4",
+          "blocking_vehicle_or_equipment": "#8b1e2d",
+          "other_traffic": "#f0af28",
+          "barrier": "#5a5a5a"
+        },
+        "blocking_actor_ids": [
+          "f236cd3a0620b50733a0a6bd092c79e2"
+        ],
+        "frame_times_unchanged": true,
+        "all_encoded_frames_have_blue_ego": true
+      }
+    },
+    "compared_catalog_fields": [
+      "mechanism",
+      "stratum",
+      "seed",
+      "split",
+      "equipment_duration",
+      "ego_entry",
+      "shoulder_available",
+      "opportunity_density",
+      "information_condition",
+      "release_relation"
+    ],
+    "current_outline_differences": [],
+    "sim_start_seconds": 0.0,
+    "sim_end_seconds": 45.00000000000037
+  },
+  "W-B": {
+    "run_id": "20261021T075635987543Z-aee0ddd625",
+    "experiment_id": "rule-test-100s-01",
+    "driver": "rule_state_machine",
+    "purpose": "Scenario demonstration; not a recovery or safety result",
+    "seed": 0,
+    "stratum": "W-B",
+    "recorded_parameters": {
+      "shoulder_available": null,
+      "opportunity_density": null,
+      "information_condition": null,
+      "equipment_duration": null,
+      "ego_entry": "upper",
+      "release_relation": null
+    },
+    "views": {
+      "camera": {
+        "gif": "media/W-B-camera.gif",
+        "poster": "media/W-B-camera-poster.jpg",
+        "sha256": "ad0c338fdf0baebcd6d54622cdd1719cdcb00f142c1b094f8cdaa5652257b677",
+        "frames": 89,
+        "width": 480,
+        "height": 320,
+        "frame_duration_ms": 1000
+      },
+      "bev": {
+        "gif": "media/W-B-bev-colors-v1.gif",
+        "poster": "media/W-B-bev-colors-v1-poster.jpg",
+        "sha256": "aa6b5062fc820368a84ded6ca0a911a14451cf5a39857abc7635ae311de2a131",
+        "frames": 89,
+        "width": 1280,
+        "height": 320,
+        "frame_duration_ms": 1000,
+        "source_original_sha256": "6634e340fb7045c32a64b0b45992ee2059b7687e481ba3c3b3bc0c6ebb067f86",
+        "display_derivative": true,
+        "source_samples_sha256": "9648b25a417b418da7786867e1c36889a6925ab1c24385cca39b1515be52946d",
+        "rendering": "Native MetaDrive replay of actual saved states; role-based colors; no physics/policy steps",
+        "role_colors": {
+          "ego": "#416eb4",
+          "blocking_vehicle_or_equipment": "#8b1e2d",
+          "other_traffic": "#f0af28",
+          "barrier": "#5a5a5a"
+        },
+        "blocking_actor_ids": [
+          "7de5271fa9fbdf6db566f861f2afec42"
+        ],
+        "frame_times_unchanged": true,
+        "all_encoded_frames_have_blue_ego": true
+      }
+    },
+    "compared_catalog_fields": [
+      "mechanism",
+      "stratum",
+      "seed",
+      "split",
+      "equipment_duration",
+      "ego_entry",
+      "shoulder_available",
+      "opportunity_density",
+      "information_condition",
+      "release_relation"
+    ],
+    "current_outline_differences": [],
+    "sim_start_seconds": 0.0,
+    "sim_end_seconds": 87.99999999999928
+  },
+  "W-C": {
+    "run_id": "20261021T081033568430Z-7983a7adcb",
+    "experiment_id": "rule-test-100s-01",
+    "driver": "rule_state_machine",
+    "purpose": "Scenario demonstration; not a recovery or safety result",
+    "seed": 0,
+    "stratum": "W-C-normal",
+    "recorded_parameters": {
+      "shoulder_available": null,
+      "opportunity_density": null,
+      "information_condition": null,
+      "equipment_duration": null,
+      "ego_entry": null,
+      "release_relation": "after_clearance"
+    },
+    "views": {
+      "camera": {
+        "gif": "media/W-C-camera.gif",
+        "poster": "media/W-C-camera-poster.jpg",
+        "sha256": "11b40b35fe93ef0047f08d109c449c8b2862031ac38e62698a6d52a3bdf79bb3",
+        "frames": 25,
+        "width": 480,
+        "height": 320,
+        "frame_duration_ms": 1000
+      },
+      "bev": {
+        "gif": "media/W-C-bev-colors-v1.gif",
+        "poster": "media/W-C-bev-colors-v1-poster.jpg",
+        "sha256": "27c65fbd969528979a53dc2f57265aa38c394024d797919707125698859bb1d4",
+        "frames": 25,
+        "width": 1280,
+        "height": 320,
+        "frame_duration_ms": 1000,
+        "source_original_sha256": "86e80438ea7526ed0414dc9def0c301989493ec51cdd47c116365bf70fbba38f",
+        "display_derivative": true,
+        "source_samples_sha256": "576258884d141569ab5812e1f56a7f2174b0c1b23e5e0b0de2c6bdfe2b91e8d4",
+        "rendering": "Native MetaDrive replay of actual saved states; role-based colors; no physics/policy steps",
+        "role_colors": {
+          "ego": "#416eb4",
+          "blocking_vehicle_or_equipment": "#8b1e2d",
+          "other_traffic": "#f0af28",
+          "barrier": "#5a5a5a"
+        },
+        "blocking_actor_ids": [],
+        "frame_times_unchanged": true,
+        "all_encoded_frames_have_blue_ego": true
+      }
+    },
+    "compared_catalog_fields": [
+      "mechanism",
+      "stratum",
+      "seed",
+      "split",
+      "equipment_duration",
+      "ego_entry",
+      "shoulder_available",
+      "opportunity_density",
+      "information_condition",
+      "release_relation"
+    ],
+    "current_outline_differences": [],
+    "sim_start_seconds": 0.0,
+    "sim_end_seconds": 24.00000000000007
+  }
+}

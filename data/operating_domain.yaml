@@ -1,0 +1,36 @@
+# SI units are in field names. Fixed engineering assumptions, not sampled axes.
+# Actor values match the existing .05 s integrator, .6 acceleration, 1.5 braking
+# and 4 m queue gap. No guaranteed opposing yielding or permanent parked cars.
+version: section31-odd-v5
+source: "Synthetic ordinary traffic on unambiguous straight public lanes keeps its directed lane within the declared tracking bound; observed departures and unclassified/off-lane sources retain generic support. This is an explicit conditional ODD, not a universal traffic guarantee."
+lane_change_policy: bounded_lane_traffic
+actor_acceleration_mps2: 0.6
+actor_braking_mps2: 1.5
+# Public spline contract <=0.3/m; existing route lateral acceleration <=0.8.
+# Prediction includes every steering history within these bounds. The actor
+# integrator checks realized curvature/acceleration; violations fail explicitly.
+actor_curvature_per_m: 0.3
+actor_lateral_acceleration_mps2: 0.8
+actor_response_seconds: 0.2
+queue_bumper_gap_m: 4.0
+position_error_m: 0.1
+velocity_error_mps: 0.1
+lateral_tracking_error_m: 0.15
+sensor_mounts_m: [[1.8, -0.8, 1.8], [1.8, 0.8, 1.8]]
+sample_period_seconds: 0.1
+acquisition_latency_seconds: 0.0
+unknown_vehicle_min_width_m: 1.6
+unknown_vehicle_max_length_m: 6.0
+unknown_vehicle_max_width_m: 2.4
+unknown_vehicle_shapes_m: [[4.5, 1.8], [4.5, 1.85], [5.0, 2.4], [6.0, 2.4], [12.0, 2.5]]
+pedestrian_speed_mps: 2.0
+quiet_min_seconds: 5.0
+traffic_window_seconds: 10.0
+quiet_component_cap_seconds: 90.0
+
+# Native ordinary vehicles: conservative physical prediction bounds; SI units.
+# These do not alter the scripted equipment integrator or ego limits.
+native_actor_acceleration_mps2: 1.2
+native_actor_braking_mps2: 4.0
+native_actor_curvature_per_m: 0.4
+native_actor_lateral_acceleration_mps2: 4.0
